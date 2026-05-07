@@ -23,24 +23,24 @@ const { width } = Dimensions.get('window');
 const SLIDES = [
 	{
 		id: '1',
-		title: 'Moto táxi rápido',
+		title: 'Encontre Bombas',
 		description:
-			'Chegue ao seu destino de forma rápida e segura com os nossos motoristas parceiros.',
-		icon: '🛵',
+			'Localize rapidamente as bombas de combustível próximas a si.',
+		icon: '⛽',
 	},
 	{
 		id: '2',
-		title: 'Pedidos simples',
+		title: 'Disponibilidade Real',
 		description:
-			'Faça encomendas ou peça para buscar produtos com apenas alguns cliques no app.',
-		icon: '📦',
+			'Economize tempo sabendo quais postos têm o combustível que precisa.',
+		icon: '📊',
 	},
 	{
 		id: '3',
-		title: 'Segurança em 1º lugar',
+		title: 'Chegue no Destino',
 		description:
-			'Motoristas verificados e acompanhamento da viagem em tempo real para sua proteção.',
-		icon: '🛡️',
+			'Navegue facilmente com as melhores rotas até a bomba escolhida.',
+		icon: '🗺️',
 	},
 ];
 

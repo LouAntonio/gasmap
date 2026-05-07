@@ -62,23 +62,23 @@ export default function SplashScreen({
 				}}
 			>
 				<Image
-					source={require('../../assets/images/logo.png')}
+					source={require('../../assets/images/logoBG.png')}
 					className="w-[200px] h-[200px] mb-6 rounded-3xl"
 					resizeMode="contain"
 				/>
 
 				<Animated.Text
-					className="text-[25px] font-bold tracking-wider mb-2"
+					className="text-[25px] font-bold tracking-wider mb-2 hidden"
 					style={{ opacity: fadeAnim, color: themeColors.text }}
 				>
-					Flash Delivery Angola
+					GasMap
 				</Animated.Text>
 
 				<Animated.Text
-					className="text-base tracking-[2px] uppercase mb-10"
+					className="text-base tracking-[2px] uppercase mb-10 text-center"
 					style={{ opacity: fadeAnim, color: themeColors.secondary }}
 				>
-					Rápido. Seguro. Sempre.
+					Combustível na hora certa. Onde você estiver.
 				</Animated.Text>
 
 				<Animated.View className="mt-5" style={{ opacity: fadeAnim }}>

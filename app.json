@@ -1,14 +1,14 @@
 {
 	"expo": {
-		"name": "Flash Delivery Angola",
-		"slug": "Flash-Delivery-Angola",
+		"name": "Gasmap",
+		"slug": "Gasmap",
 		"version": "1.0.0",
 		"orientation": "portrait",
-		"icon": "./assets/images/logo.png",
+		"icon": "./assets/images/logoBG.png",
 		"userInterfaceStyle": "automatic",
 		"newArchEnabled": true,
 		"splash": {
-			"image": "./assets/images/logo.png",
+			"image": "./assets/images/logoBG.png",
 			"resizeMode": "contain",
 			"backgroundColor": "#ffffff"
 		},
@@ -17,14 +17,14 @@
 		},
 		"android": {
 			"adaptiveIcon": {
-				"foregroundImage": "./assets/images/logo.png",
+				"foregroundImage": "./assets/images/logoBG.png",
 				"backgroundColor": "#ffffff"
 			},
 			"edgeToEdgeEnabled": true,
 			"predictiveBackGestureEnabled": false
 		},
 		"web": {
-			"favicon": "./assets/images/logo.png",
+			"favicon": "./assets/images/logoBG.png",
 			"bundler": "metro"
 		},
 		"plugins": ["expo-secure-store", "expo-font"],

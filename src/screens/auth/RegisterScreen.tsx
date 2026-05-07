@@ -63,7 +63,7 @@ export default function RegisterScreen() {
 						className="items-center mb-8"
 					>
 						<Image
-							source={require('../../../assets/images/logo.png')}
+							source={require('../../../assets/images/logoBG.png')}
 							style={styles.logo}
 							className="mb-4 rounded-3xl"
 						/>

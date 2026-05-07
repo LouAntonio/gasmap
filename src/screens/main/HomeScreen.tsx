@@ -82,7 +82,7 @@ export default function HomeScreen() {
 				]}
 			>
 				<Image
-					source={require('../../../assets/images/logo.png')}
+					source={require('../../../assets/images/logoBG.png')}
 					style={styles.logo}
 				/>
 				<TouchableOpacity

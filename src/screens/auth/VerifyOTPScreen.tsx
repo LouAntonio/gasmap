@@ -107,7 +107,7 @@ export default function VerifyOTPScreen() {
 					className="items-center mb-10"
 				>
 					<Image
-						source={require('../../../assets/images/logo.png')}
+						source={require('../../../assets/images/logoBG.png')}
 						style={styles.logo}
 						className="mb-6 rounded-3xl"
 					/>
