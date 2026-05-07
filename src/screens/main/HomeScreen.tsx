@@ -244,7 +244,10 @@ export default function HomeScreen() {
 										color="#000"
 									/>
 								</View>
-								<Callout tooltip onPress={() => handleMarkerPress(bomba)}>
+								<Callout
+									tooltip
+									onPress={() => handleMarkerPress(bomba)}
+								>
 									<View
 										style={[
 											styles.calloutContainer,
