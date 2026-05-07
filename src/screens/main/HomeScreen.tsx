@@ -227,7 +227,6 @@ export default function HomeScreen() {
 									latitude: bomba.latitude,
 									longitude: bomba.longitude,
 								}}
-								onPress={() => handleMarkerPress(bomba)}
 							>
 								<View
 									style={[
@@ -245,7 +244,7 @@ export default function HomeScreen() {
 										color="#000"
 									/>
 								</View>
-								<Callout tooltip>
+								<Callout tooltip onPress={() => handleMarkerPress(bomba)}>
 									<View
 										style={[
 											styles.calloutContainer,
@@ -641,6 +640,8 @@ const styles = StyleSheet.create({
 		flex: 1,
 		fontSize: 16,
 		fontWeight: '500',
+		paddingVertical: 0,
+		includeFontPadding: false,
 	},
 	searchResults: {
 		marginTop: 8,

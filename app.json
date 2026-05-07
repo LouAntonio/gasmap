@@ -1,47 +1,44 @@
 {
-  "expo": {
-    "name": "Gasmap",
-    "slug": "Gasmap",
-    "version": "1.0.0",
-    "orientation": "portrait",
-    "icon": "./assets/images/logoBG.png",
-    "userInterfaceStyle": "automatic",
-    "newArchEnabled": true,
-    "splash": {
-      "image": "./assets/images/logoBG.png",
-      "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
-    },
-    "ios": {
-      "supportsTablet": true
-    },
-    "android": {
-      "adaptiveIcon": {
-        "foregroundImage": "./assets/images/logoBG.png",
-        "backgroundColor": "#ffffff"
-      },
-      "edgeToEdgeEnabled": true,
-      "predictiveBackGestureEnabled": false
-    },
-    "web": {
-      "favicon": "./assets/images/logoBG.png",
-      "bundler": "metro"
-    },
-    "plugins": [
-      "expo-secure-store",
-      "expo-font"
-    ],
-    "extra": {
-      "eas": {
-        "projectId": "792b655f-a495-469e-b47b-89bf0a7f018b"
-      }
-    },
-    "owner": "louantonio",
-    "runtimeVersion": {
-      "policy": "appVersion"
-    },
-    "updates": {
-      "url": "https://u.expo.dev/792b655f-a495-469e-b47b-89bf0a7f018b"
-    }
-  }
+	"expo": {
+		"name": "Gasmap",
+		"slug": "Gasmap",
+		"version": "1.0.0",
+		"orientation": "portrait",
+		"icon": "./assets/images/logoBG.png",
+		"userInterfaceStyle": "automatic",
+		"newArchEnabled": true,
+		"splash": {
+			"image": "./assets/images/logoBG.png",
+			"resizeMode": "contain",
+			"backgroundColor": "#ffffff"
+		},
+		"ios": {
+			"supportsTablet": true
+		},
+		"android": {
+			"adaptiveIcon": {
+				"foregroundImage": "./assets/images/logoBG.png",
+				"backgroundColor": "#ffffff"
+			},
+			"edgeToEdgeEnabled": true,
+			"predictiveBackGestureEnabled": false
+		},
+		"web": {
+			"favicon": "./assets/images/logoBG.png",
+			"bundler": "metro"
+		},
+		"plugins": ["expo-secure-store", "expo-font"],
+		"extra": {
+			"eas": {
+				"projectId": "792b655f-a495-469e-b47b-89bf0a7f018b"
+			}
+		},
+		"owner": "louantonio",
+		"runtimeVersion": {
+			"policy": "appVersion"
+		},
+		"updates": {
+			"url": "https://u.expo.dev/792b655f-a495-469e-b47b-89bf0a7f018b"
+		}
+	}
 }
