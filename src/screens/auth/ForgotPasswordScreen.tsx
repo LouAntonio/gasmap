@@ -25,16 +25,16 @@ export default function ForgotPasswordScreen() {
 	const navigation = useNavigation<ForgotPasswordNavigationProp>();
 	const { themeColors } = useThemeColors();
 
-	const [phone, setPhone] = useState('');
+	const [email, setEmail] = useState('');
 
 	const handleSendOTP = () => {
-		if (!phone) {
-			Alert.alert('Erro', 'Por favor, insira o seu número de telefone.');
+		if (!email) {
+			Alert.alert('Erro', 'Por favor, insira o seu email.');
 			return;
 		}
 		// logic to send OTP soon
-		Alert.alert('Sucesso', 'Código OTP enviado para o seu telefone.');
-		navigation.navigate('VerifyOTP', { phone });
+		Alert.alert('Sucesso', 'Código OTP enviado para o seu email.');
+		navigation.navigate('VerifyOTP', { email });
 	};
 
 	return (
@@ -67,22 +67,23 @@ export default function ForgotPasswordScreen() {
 						className="text-base text-center px-4"
 						style={[
 							styles.description,
-							{ color: themeColors.secondary },
+							{ color: themeColors.text },
 						]}
 					>
-						Informe o seu número de telefone para receber um código
-						de verificação (OTP).
+						Informe o seu email para receber um código de
+						verificação (OTP).
 					</Text>
 				</Animated.View>
 
 				<Animated.View entering={FadeInUp.duration(800).delay(400)}>
 					<Input
-						label="Telefone"
-						placeholder="9XX XXX XXX"
-						value={phone}
-						onChangeText={setPhone}
-						keyboardType="phone-pad"
-						leftIcon="call-outline"
+						label="Email"
+						placeholder="seu@email.com"
+						value={email}
+						onChangeText={setEmail}
+						keyboardType="email-address"
+						autoCapitalize="none"
+						leftIcon="mail-outline"
 					/>
 
 					<Button

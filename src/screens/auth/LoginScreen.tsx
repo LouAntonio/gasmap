@@ -25,7 +25,7 @@ type LoginNavigationProp = NativeStackNavigationProp<
 export default function LoginScreen() {
 	const navigation = useNavigation<LoginNavigationProp>();
 	const { themeColors } = useThemeColors();
-	const [phone, setPhone] = useState('');
+	const [email, setEmail] = useState('');
 	const [password, setPassword] = useState('');
 
 	const handleLogin = () => {
@@ -63,10 +63,7 @@ export default function LoginScreen() {
 					</Text>
 					<Text
 						className="text-lg font-medium text-center px-4"
-						style={[
-							styles.subtitle,
-							{ color: themeColors.secondary },
-						]}
+						style={[styles.subtitle, { color: themeColors.text }]}
 					>
 						Bem-vindo de volta! Faça login para continuar.
 					</Text>
@@ -74,13 +71,13 @@ export default function LoginScreen() {
 
 				<Animated.View entering={FadeInUp.duration(800).delay(400)}>
 					<Input
-						label="Telefone"
-						placeholder="9XX XXX XXX"
-						value={phone}
-						onChangeText={setPhone}
-						keyboardType="phone-pad"
+						label="Email"
+						placeholder="seu@email.com"
+						value={email}
+						onChangeText={setEmail}
+						keyboardType="email-address"
 						autoCapitalize="none"
-						leftIcon="call-outline"
+						leftIcon="mail-outline"
 					/>
 
 					<Input
@@ -125,7 +122,7 @@ export default function LoginScreen() {
 							className="mx-6 text-xs font-bold tracking-widest"
 							style={[
 								styles.dividerText,
-								{ color: themeColors.secondary },
+								{ color: themeColors.text },
 							]}
 						>
 							OU CONTINUE COM
@@ -150,10 +147,7 @@ export default function LoginScreen() {
 					className="flex-row items-center justify-center mt-12 mb-6"
 				>
 					<Text
-						style={[
-							styles.footerText,
-							{ color: themeColors.secondary },
-						]}
+						style={[styles.footerText, { color: themeColors.text }]}
 					>
 						Novo por aqui?{' '}
 					</Text>

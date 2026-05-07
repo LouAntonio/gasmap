@@ -4,8 +4,8 @@ export type AuthStackParamList = {
 	Login: undefined;
 	Register: undefined;
 	ForgotPassword: undefined;
-	VerifyOTP: { phone: string };
-	ResetPassword: { phone: string; otp: string };
+	VerifyOTP: { email: string };
+	ResetPassword: { email: string; otp: string };
 };
 
 export type MainStackParamList = {

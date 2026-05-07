@@ -31,12 +31,23 @@ export default function RegisterScreen() {
 
 	const [firstName, setFirstName] = useState('');
 	const [lastName, setLastName] = useState('');
-	const [phone, setPhone] = useState('');
+	const [email, setEmail] = useState('');
 	const [password, setPassword] = useState('');
+	const [confirmPassword, setConfirmPassword] = useState('');
 
 	const handleRegister = () => {
-		if (!firstName || !lastName || !phone || !password) {
+		if (
+			!firstName ||
+			!lastName ||
+			!email ||
+			!password ||
+			!confirmPassword
+		) {
 			Alert.alert('Erro', 'Por favor, preencha todos os campos.');
+			return;
+		}
+		if (password !== confirmPassword) {
+			Alert.alert('Erro', 'As senhas não coincidem.');
 			return;
 		}
 		// handle auth logic soon
@@ -77,7 +88,7 @@ export default function RegisterScreen() {
 							className="text-base text-center px-6"
 							style={[
 								styles.subtitle,
-								{ color: themeColors.secondary },
+								{ color: themeColors.text },
 							]}
 						>
 							Crie uma conta e peça uma corrida ou mande uma
@@ -108,12 +119,13 @@ export default function RegisterScreen() {
 						</View>
 
 						<Input
-							label="Telefone"
-							placeholder="9XX XXX XXX"
-							value={phone}
-							onChangeText={setPhone}
-							keyboardType="phone-pad"
-							leftIcon="call-outline"
+							label="Email"
+							placeholder="seu@email.com"
+							value={email}
+							onChangeText={setEmail}
+							keyboardType="email-address"
+							autoCapitalize="none"
+							leftIcon="mail-outline"
 						/>
 
 						<Input
@@ -121,6 +133,15 @@ export default function RegisterScreen() {
 							placeholder="Crie sua senha"
 							value={password}
 							onChangeText={setPassword}
+							isPassword
+							leftIcon="lock-closed-outline"
+						/>
+
+						<Input
+							label="Confirmar Senha"
+							placeholder="Confirme sua senha"
+							value={confirmPassword}
+							onChangeText={setConfirmPassword}
 							isPassword
 							leftIcon="lock-closed-outline"
 						/>
@@ -143,7 +164,7 @@ export default function RegisterScreen() {
 								className="mx-6 text-xs font-bold tracking-widest"
 								style={[
 									styles.dividerText,
-									{ color: themeColors.secondary },
+									{ color: themeColors.text },
 								]}
 							>
 								OU USE
@@ -163,7 +184,7 @@ export default function RegisterScreen() {
 							<Text
 								style={[
 									styles.footerText,
-									{ color: themeColors.secondary },
+									{ color: themeColors.text },
 								]}
 							>
 								Já tem conta?{' '}

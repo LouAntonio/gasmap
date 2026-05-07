@@ -65,7 +65,7 @@ export default function ResetPasswordScreen() {
 						className="text-base text-center px-4"
 						style={[
 							styles.description,
-							{ color: themeColors.secondary },
+							{ color: themeColors.text },
 						]}
 					>
 						Crie uma nova senha segura para o seu acesso.

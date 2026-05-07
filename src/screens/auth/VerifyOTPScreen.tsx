@@ -27,7 +27,7 @@ type VerifyOTPRouteProp = RouteProp<AuthStackParamList, 'VerifyOTP'>;
 export default function VerifyOTPScreen() {
 	const navigation = useNavigation<VerifyOTPNavigationProp>();
 	const route = useRoute<VerifyOTPRouteProp>();
-	const { phone } = route.params;
+	const { email } = route.params;
 	const { themeColors, isDark } = useThemeColors();
 
 	const [otp, setOtp] = useState('');
@@ -39,7 +39,7 @@ export default function VerifyOTPScreen() {
 			return;
 		}
 		// logic to verify OTP soon
-		navigation.navigate('ResetPassword', { phone, otp });
+		navigation.navigate('ResetPassword', { email, otp });
 	};
 
 	const safeAreaStyle = useMemo(
@@ -53,8 +53,8 @@ export default function VerifyOTPScreen() {
 	);
 
 	const secondaryTextStyle = useMemo(
-		() => ({ color: themeColors.secondary }),
-		[themeColors.secondary],
+		() => ({ color: themeColors.text }),
+		[themeColors.text],
 	);
 
 	const primaryTextStyle = useMemo(
@@ -121,7 +121,7 @@ export default function VerifyOTPScreen() {
 						className="text-base text-center px-4"
 						style={[styles.description, secondaryTextStyle]}
 					>
-						Enviamos um código de verificação para o número {phone}.
+						Enviamos um código de verificação para o email {email}.
 						Insira-o abaixo para continuar.
 					</Text>
 				</Animated.View>
